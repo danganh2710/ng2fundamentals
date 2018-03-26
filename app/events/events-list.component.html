@@ -2,7 +2,7 @@
     <h1>Angular 2 Fundamental</h1>
     <hr>
     <div class="row">
-        <div class="col-md-5" *ngFor='let event of events'>
+        <div class="col-md-5" *ngFor='let event of events' (click)='handleClickThumbnail(event.name)'>
             <event-thumbnail #thumbnail [event]='event'></event-thumbnail>
         </div>
     </div>
