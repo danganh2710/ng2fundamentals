@@ -7,6 +7,7 @@ import { EventRouteActivator } from "./events/event-details/event-route-activato
 import { EventListResolver } from "./events/events-list-resolver.service";
 
 export const appRoutes: Routes = [
+    { path: 'user', loadChildren:'app/user/user.module#UserModule'},
     { path: 'events/new', component: CreateEventComponent, canDeactivate: ['canDeactivateCreateEvent'] },
     { path: 'events', component: EventsListComponent, resolve: { events: EventListResolver } },
     { path: 'events/:id', canActivate: [EventRouteActivator], component: EventDetailsComponent },
