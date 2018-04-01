@@ -1,10 +1,8 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
-import {
-    ProfileComponent, 
-    userRoutes
-} from "./index";
+import {LoginComponent, ProfileComponent, userRoutes} from './index'
+
 
 @NgModule({
     imports: [
@@ -12,7 +10,8 @@ import {
         RouterModule.forChild(userRoutes)
     ],
     declarations: [
-        ProfileComponent
+        ProfileComponent,
+        LoginComponent
     ],
     providers: [
 

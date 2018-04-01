@@ -1,6 +1,7 @@
 import { Routes } from "@angular/router"
-import { ProfileComponent } from "./profile.component";
+import {LoginComponent, ProfileComponent} from './index'
 
 export const userRoutes: Routes = [
-    { path: 'profile', component: ProfileComponent }
+    { path: 'profile', component: ProfileComponent },    
+    { path: 'login', component: LoginComponent }
 ]
