@@ -1,3 +1,5 @@
 export * from './profile.component'
 export * from './login.component'
 export * from './user.routes'
+export * from './user.model'
+export * from './user-auth.service'

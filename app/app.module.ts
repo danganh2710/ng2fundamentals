@@ -14,8 +14,8 @@ import {
     ToastrService,
     appRoutes,
     Error404Component,
+    UserAuthService
 } from './index'
-
 
 @NgModule({
     imports: [
@@ -34,6 +34,7 @@ import {
     providers: [
         EventService, 
         ToastrService, 
+        UserAuthService,
         EventRouteActivator, 
         {
             provide:'canDeactivateCreateEvent', useValue:checkDirtySate
