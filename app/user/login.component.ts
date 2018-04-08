@@ -12,7 +12,7 @@ export class LoginComponent {
   }
   onSubmit(formValue) {
     this.auth.login(formValue.userName, formValue.passWord)
-    if(this.auth.isAuthenticated){
+    if(this.auth.isAuthenticated()){
       this.route.navigate(["/events"])
     }
   }
