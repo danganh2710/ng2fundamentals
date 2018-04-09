@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: 'app/user/login.component.html',
 })
 export class LoginComponent {
+  mouseOver:boolean = false;
   constructor(private auth:UserAuthService, private route: Router) {
 
   }
@@ -15,5 +16,9 @@ export class LoginComponent {
     if(this.auth.isAuthenticated()){
       this.route.navigate(["/events"])
     }
+  }
+
+  onCancel(){
+    this.route.navigate(["/events"])
   }
 }

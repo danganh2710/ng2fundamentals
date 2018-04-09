@@ -1,0 +1,25 @@
+<div>
+    <h1>Edit Your Profile </h1>
+    <hr>
+    <div class="col-md-4">
+        <form [formGroup]="profile" autocomplete="off" novalidate (ngSubmit)="onSubmit(profile.value)">
+            <div class="form-group" [class.has-error]="profile.controls.firstName?.invalid && profile.controls.firstName?.touched">
+                <label for="firstName" class="control-label">First Name:</label>
+                <input formControlName="firstName" id="firstName" type="text" class="form-control" placeholder="First Name..." />
+                <div class="alert alert-danger" role="alert" *ngIf="profile.controls.firstName.errors?.required && profile.controls.firstName?.touched">
+                    Required
+                </div>
+                <div class="alert alert-danger" role="alert" *ngIf="profile.controls.firstName.errors?.pattern && profile.controls.firstName?.touched">
+                    Fisrt character can not be number
+                </div>
+            </div>
+            <div class="form-group" [class.has-error]="profile.controls.lastName?.invalid && profile.controls.lastName?.touched">
+                <label for="lastName" class="control-label">Last Name:</label>
+                <input formControlName="lastName" id="lastName" type="text" class="form-control" placeholder="Last Name..." />
+            </div>
+
+            <button [disabled]="this.profile.invalid" type="submit" class="btn btn-primary">Save</button>
+            <button (click)="cancel()" type="button" class="btn btn-default">Cancel</button>
+        </form>
+    </div>
+</div>
